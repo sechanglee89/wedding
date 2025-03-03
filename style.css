@@ -4,29 +4,40 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 body {
   background-color: #ffffff;
   color: #000000;
   font-family: "Ownglyph_ParkDaHyun", sans-serif;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .container {
   text-align: center;
   padding: 20px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .content-wrap {
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
 }
 
 .content-wrap::before,
@@ -62,13 +73,13 @@ p {
 }
 
 .announcement {
-  font-size: 2.2rem;
-  margin: 1.2rem 0;
+  font-size: 2rem;
+  margin: 0.8rem 0;
 }
 
 .waiting {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
 }
 
 .highlight {
@@ -77,34 +88,22 @@ p {
   letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+@media (max-width: 360px) {
+  .container {
+    padding: 15px;
   }
 
-  .announcement {
-    font-size: 2rem;
-  }
-
-  .waiting {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
+  .content-wrap {
+    padding: 1.8rem 1.2rem;
+    min-height: 200px;
   }
 
   .announcement {
     font-size: 1.8rem;
+    margin: 0.6rem 0;
   }
 
   .waiting {
     font-size: 1.1rem;
-  }
-
-  .content-wrap {
-    padding: 1.5rem;
   }
 }
